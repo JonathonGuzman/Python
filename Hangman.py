@@ -1,11 +1,11 @@
 import random
-import hangman_pics
-import hangman_words
+import Hangman_Graphics
+import Hangman_Words_List
 from replit import clear
 
-random_word = random.choice(hangman_words.word_list)
+random_word = random.choice(Hangman_Words_List.word_list)
 
-print(hangman_pics.logo)
+print(Hangman_Graphics.logo)
 
 # Keeps track of wrong guesses
 live = 6
@@ -39,4 +39,4 @@ while "_"  in display:
   if "_" not in display:
     print("You win.")
 
-  print(hangman_pics.stages[live])
+  print(Hangman_Graphics.stages[live])
